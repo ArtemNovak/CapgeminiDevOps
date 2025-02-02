@@ -87,14 +87,10 @@ Description: Image update
 
 ## Bonus Task 10: GitOps with AKS
 
-![CosmosDB](task10/acc-create.png)
-![CosmosDB](task10/values.png)
-Description: CosmosDB and values
-
-![CosmosDB](task10/replication-region.png)
-![CosmosDB](task10/session-replication.png)
-Description: CosmosDB replication
-
-![CosmosDB](task10/failover.png)
-![CosmosDB](task10/manual-failover.png)
-Description: CosmosDB failover
+![ArgoCD](task10/creation.png)
+![ArgoCD](task10/uiargo.png)
+![ArgoCD](task10/appdeploy.png)
+![ArgoCD](task10/argodeploy.png)
+![ArgoCD](task10/deployappngo.png)
+![ArgoCD](task10/deployappngo.png)
+Description: ArgoCD
