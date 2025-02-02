@@ -117,4 +117,3 @@ Description: CosmosDB replication
 ![CosmosDB](task10/failover.png)
 ![CosmosDB](task10/manual-failover.png)
 Description: CosmosDB failover
-
