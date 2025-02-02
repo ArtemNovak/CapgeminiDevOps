@@ -92,5 +92,5 @@ Description: Image update
 ![ArgoCD](task10/appdeploy.png)
 ![ArgoCD](task10/argodeploy.png)
 ![ArgoCD](task10/deployappngo.png)
-![ArgoCD](task10/deployappngo.png)
+![ArgoCD](task10/results.png)
 Description: ArgoCD
