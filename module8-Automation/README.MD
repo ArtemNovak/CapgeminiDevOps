@@ -2,95 +2,108 @@
 
 ## Practical Task 1: Install and Configure Azure CLI and PowerShell
 
-![DockerACR](task1/docker.png)
-![DockerACR](task1/imagepush.png)
-![DockerACR](task1/acrui.png)
-Description: Create and push docker
-
-![DockerACR](task1/generaldomain.png)
-![DockerACR](task1/cnameconfig.png)
-![DockerACR](task1/mydomain.png)
-Description: Domain
+![CLI](task1/pwsh.png)
+![CLI](task1/azcli.png)
+Description: az cli and powershell
 
 ## Practical Task 2: Create and Manage Resource Groups
 
-![ACIvariables](task2/envvariables.png)
-![ACIvariables](task2/appdeployemnt.png)
-![ACIvariables](task2/appcode.png)
-Description: Env variables
+![ManageRG](task2/creategroup.png)
+![ManageRG](task2/pwshcreategroup.png)
+Description: Create group
+
+![ManageRG](task2/listofgroups.png)
+![ManageRG](task2/listofgroupspwsh.png)
+Description: List
+
+![ManageRG](task2/deletegroup.png)
+![ManageRG](task2/deletegrouppwsh.png)
+Description: Delete
 
 ## Practical Task 3: Deploy and Manage Virtual Machines using Azure CLI and PowerShell
 
-![ContainerAPP](task3/containerapp.png)
-![ContainerAPP](task3/replicaup.png)
-![ContainerAPP](task3/scale.png)
-![ContainerAPP](task3/curlverify.png)
-Description: Container App
+![DeployVM](task3/azcreatevm.png)
+![DeployVM](task3/pwshcreatevm.png)
+Description: Deploy VM
+
+![DeployVM](task3/azvminfo.png)
+![DeployVM](task3/pwshvminfo.png)
+Description: VM info
+
+![DeployVM](task3/stopandremovevm.png)
+![DeployVM](task3/stopandremovevmpwsh.png)
+Description: Stop and Remove
 
 ## Practical Task 4: Manage Storage Accounts using Azure CLI and PowerShell
 
-![Fileshare](task4/managedidentity.png)
-![Fileshare](task4/verifykeyavailability.png)
-![Fileshare](task4/fromui.png)
-![Fileshare](task4/appmi.png)
-Description: Key Vault Access for APP
+![ManageStorageAccount](task4/createstorage.png)
+![ManageStorageAccount](task4/createstoragepwsh.png)
+![ManageStorageAccount](task4/showstringandlist.png)
+![ManageStorageAccount](task4/showstringandlistpwsh.png)
+Description: Manage Storage Account
 
 ## Practical Task 5: Assign Role-Based Access Control (RBAC) Roles
 
-![AKS1](task5/akscreation.png)
-![AKS1](task5/aksui.png)
-Description: AKS creation
+![AssignRoles](task5/createuser.png)
+![AssignRoles](task5/assignreader.png)
+![AssignRoles](task5/assigncontributor.png)
+Description: Create user, assing roles
 
-![AKS1](task5/deployinfo.png)
-![AKS1](task5/deploynginx.png)
-![AKS1](task5/nginxui.png)
-Description: Info
+![AssignRoles](task5/verifyroles.png)
+![AssignRoles](task5/deleteroles.png)
+Description: Verify roles and delete
 
 ## Practical Task 6: Set Up a Scalable Web Server with VM, Storage, and Networking
 
-![AKS2](task6/configwithacr.png)
-![AKS2](task6/deploynew.png)
-![AKS2](task6/successdeploy.png)
-Description: Deploy with ACR
+![Task6](task6/creategroup.png)
+Description: Create group
+
+![Task6](task6/vnetnsubnet.png)
+Description: Create Vnet and subnet
+
+![Task6](task6/createvm.png)
+![Task6](task6/createstorage.png)
+Description: Create VM and storage
+
+![Task6](task6/installnginx.png)
+![Task6](task6/enablelogs.png)
+![Task6](task6/ipncurl.png)
+Description: Nginx and logs
+
 
 ## Practical Task 7: Create and Run an Azure Automation Runbook
 
-![AKS3](task7/config.png)
-![AKS3](task7/defaultparams.png)
-![AKS3](task7/withcmds.png)
-![AKS3](task7/apikeyview.png)
-Description: AKS envs
+![Runbook](task7/createrunbook.png)
+![Runbook](task7/startingmachinwithidentety.png)
+![Runbook](task7/runbookview.png)
+![Runbook](task7/runbookstart.png)
+![Runbook](task7/schedule.png)
+Description: Runbook
 
 ## Practical Task 8: Automate Resource Cleanup Using a PowerShell Runbook
 
-![AKS4](task8/scale.png)
-![AKS4](task8/scaleinfo.png)
-![AKS4](task8/hpaapply.png)
-Description: HPA
-
-![AKS4](task8/monitoring.png)
-![AKS4](task8/watchload.png)
-![AKS4](task8/watchload2.png)
-Description: Load
-
-![AKS4](task8/statechanges.png)
-![AKS4](task8/uilogs.png)
-Description: Changes of pods
+![Runbook2](task8/runbook.png)
+![Runbook2](task8/webhook.png)
+![Runbook2](task8/runwebhook.png)
+![Runbook2](task8/webhooktrigger.png)
+Description: Runbook webhook
 
 ## Practical Task 9: Implement Desired State Configuration (DSC) to Enforce VM Settings
 
-![AKS5](task9/rollout.png)
-![AKS5](task9/setimage.png)
-![AKS5](task9/versionchange.png)
-![AKS5](task9/colorchange.png)
-Description: Image update
+![DSC](task9/configDSC.png)
+![DSC](task9/assignDSC.png)
+![DSC](task9/publishDSC.png)
+![DSC](task9/installedIIS.png)
+![DSC](task9/verifyIIS.png)
+![DSC](task9/applyingDSC.png)
+![DSC](task9/locallytesting.png)
+Description: DSC
 
 ## Practical Task 10: Automate Multi-Resource Deployment and Configuration Using Runbooks and DSC
 
-![ArgoCD](task10/creation.png)
-![ArgoCD](task10/uiargo.png)
-![ArgoCD](task10/appdeploy.png)
-![ArgoCD](task10/argodeploy.png)
-![ArgoCD](task10/deployappngo.png)
-![ArgoCD](task10/results.png)
-Description: ArgoCD
+![Runbook&&DSC](task10/createrunbook.png)
+![Runbook&&DSC](task10/publishrunbook.png)
+![Runbook&&DSC](task10/logsapplyingrunbook.png)
+![Runbook&&DSC](task10/statuslogs.png)
+![Runbook&&DSC](task10/IISpage.png)
+Description: Runbook&&DSC
