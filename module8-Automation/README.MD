@@ -1,4 +1,4 @@
-# Module 7: Azure Automation
+# Module 8: Azure Automation
 
 ## Practical Task 1: Install and Configure Azure CLI and PowerShell
 

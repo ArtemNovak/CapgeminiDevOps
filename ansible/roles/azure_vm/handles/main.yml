@@ -1,0 +1,7 @@
+---
+- name: "restart nginx"
+  service:
+    name: nginx
+    state: restarted
+  become: true
+  delegate_to: "{{ public_ip_output.state.ip_address }}"

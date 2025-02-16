@@ -1,0 +1,7 @@
+resource_group: "ArtemNovakAnsible"
+location: "westeurope"
+vnet_name: "anvnet"
+subnet_name: "ansubnet"
+nsg_name: "annsg"
+vm_name: "anVM"
+admin_username: azureadmin

@@ -1,0 +1,26 @@
+---
+- name: Include Azure setup tasks
+  import_tasks: azure_setup.yml
+
+- name: Wait for VM to be reachable
+  wait_for:
+    host: "{{ public_ip_output.state.ip_address }}"
+    port: 22
+    delay: 10
+    timeout: 300
+
+- name: Add VM to inventory
+  add_host:
+    hostname: "{{ public_ip_output.state.ip_address }}"
+    groups: azure_vms
+    ansible_connection: ssh
+    ansible_user: "{{ admin_username }}"
+    ansible_ssh_private_key_file: "~/.ssh/ansible_key"
+    ansible_become: yes
+    ansible_become_method: sudo
+    ansible_become_flags: '-S'
+    ansible_sudo_flags: '-S'
+    ansible_ssh_extra_args: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no'
+   
+- name: Include Nginx setup tasks
+  import_tasks: nginx_setup.yml

@@ -1,0 +1,8 @@
+---
+- name: Deploy Azure Infrastructure
+  hosts: localhost
+  connection: local
+  vars_files:
+    - roles/azure_vm/vars/vars.yml
+  roles:
+    - azure_vm
