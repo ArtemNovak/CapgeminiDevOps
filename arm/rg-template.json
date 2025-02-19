@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "rgName": {
+            "type": "string",
+            "defaultValue": "ArtemNovakARM",
+            "metadata": {
+                "description": "Name of the Resource Group"
+            }
+        },
+        "rgLocation": {
+            "type": "string",
+            "defaultValue": "westeurope",
+            "metadata": {
+                "description": "Location of the Resource Group"
+            }
+        },
+        "tags": {
+            "type": "object",
+            "defaultValue": {
+                "environment": "test",
+                "deployedBy": "ARM"
+            }
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2021-04-01",
+            "name": "[parameters('rgName')]",
+            "location": "[parameters('rgLocation')]",
+            "tags": "[parameters('tags')]",
+            "properties": {}
+        }
+    ],
+    "outputs": {
+        "resourceGroupName": {
+            "type": "string",
+            "value": "[parameters('rgName')]"
+        },
+        "resourceGroupLocation": {
+            "type": "string",
+            "value": "[parameters('rgLocation')]"
+        }
+    }
+}

@@ -1,0 +1,109 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "rgName": {
+            "type": "string",
+            "defaultValue": "ArtemNovakARM",
+            "metadata": {
+                "description": "Name of the Resource Group"
+            }
+        },
+        "rgLocation": {
+            "type": "string",
+            "defaultValue": "westeurope",
+            "metadata": {
+                "description": "Location of the Resource Group"
+            }
+        },
+        "tags": {
+            "type": "object",
+            "defaultValue": {
+                "environment": "test",
+                "deployedBy": "ARM"
+            }
+        },
+        "storageAccountName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of the storage account"
+            }
+        },
+        "storageAccountLocation": {
+            "type": "string",
+            "defaultValue": "[parameters('rgLocation')]",
+            "metadata": {
+                "description": "Location for the storage account"
+            }
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2021-04-01",
+            "name": "[parameters('rgName')]",
+            "location": "[parameters('rgLocation')]",
+            "tags": "[parameters('tags')]",
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2021-04-01",
+            "name": "storageDeployment",
+            "resourceGroup": "[parameters('rgName')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Resources/resourceGroups', parameters('rgName'))]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": [
+                        {
+                            "type": "Microsoft.Storage/storageAccounts",
+                            "apiVersion": "2021-09-01",
+                            "name": "[parameters('storageAccountName')]",
+                            "location": "[parameters('storageAccountLocation')]",
+                            "sku": {
+                                "name": "Standard_LRS"
+                            },
+                            "kind": "StorageV2",
+                            "properties": {
+                                "allowBlobPublicAccess": false,
+                                "accessTier": "Hot",
+                                "supportsHttpsTrafficOnly": true,
+                                "minimumTlsVersion": "TLS1_2",
+                                "deleteRetentionPolicy": {
+                                    "enabled": true,
+                                    "days": 7
+                                },
+                                "blobServiceProperties": {
+                                    "deleteRetentionPolicy": {
+                                        "enabled": true,
+                                        "days": 7
+                                    }
+                                }
+                            },
+                            "tags": "[parameters('tags')]"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "outputs": {
+        "resourceGroupName": {
+            "type": "string",
+            "value": "[parameters('rgName')]"
+        },
+        "resourceGroupLocation": {
+            "type": "string",
+            "value": "[parameters('rgLocation')]"
+        },
+        "storageAccountName": {
+            "type": "string",
+            "value": "[parameters('storageAccountName')]"
+        }
+    }
+}
