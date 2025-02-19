@@ -57,65 +57,67 @@ Description: Ansible VM and nginx
 
 ## Practical Task 6: Deploy a Scalable Azure Infrastructure with Ansible and Dynamic Inventory (optional)
 
-![Task6](task6/creategroup.png)
-Description: Create group
-
-![Task6](task6/vnetnsubnet.png)
-Description: Create Vnet and subnet
-
-![Task6](task6/createvm.png)
-![Task6](task6/createstorage.png)
-Description: Create VM and storage
-
-![Task6](task6/installnginx.png)
-![Task6](task6/enablelogs.png)
-![Task6](task6/ipncurl.png)
-Description: Nginx and logs
-
 ## Practical Task 7: Deploy a Resource Group Using an ARM Template
 
-![Runbook](task7/createrunbook.png)
-![Runbook](task7/startingmachinwithidentety.png)
-![Runbook](task7/runbookview.png)
-![Runbook](task7/runbookstart.png)
-![Runbook](task7/schedule.png)
-Description: Runbook
+![ARM](task7/pre-deploy.png)
+![ARM](task7/deploy.png)
+![ARM](task7/showtags.png)
+![ARM](task7/verifydeploy.png)
+Description: ARM group
 
 ## Practical Task 8: Deploy an Azure Storage Account Using an ARM Template
 
-![Runbook2](task8/runbook.png)
-![Runbook2](task8/webhook.png)
-![Runbook2](task8/runwebhook.png)
-![Runbook2](task8/webhooktrigger.png)
-Description: Runbook webhook
+![ARM2](task8/params-storage.png)
+![ARM2](task8/config.png)
+![ARM2](task8/tags.png)
+![ARM2](task8/deploy.png)
+Description: ARM webhook
 
 ## Practical Task 9: Terraform: Deploy a Production-Ready AKS Cluster with GitOps & Secret Management & Monitoring
 
-![DSC](task9/configDSC.png)
-![DSC](task9/assignDSC.png)
-![DSC](task9/publishDSC.png)
-![DSC](task9/installedIIS.png)
-![DSC](task9/verifyIIS.png)
-![DSC](task9/applyingDSC.png)
-![DSC](task9/locallytesting.png)
-Description: DSC
-
 ## Practical Task 10: Deploy a Virtual Machine with Networking Using an ARM Template
 
-![Runbook&&DSC](task10/createrunbook.png)
-![Runbook&&DSC](task10/publishrunbook.png)
-![Runbook&&DSC](task10/logsapplyingrunbook.png)
-![Runbook&&DSC](task10/statuslogs.png)
-![Runbook&&DSC](task10/IISpage.png)
-Description: Runbook&&DSC
+![ARM3](task10/deploy.png)
+![ARM3](task10/connection.png)
+![ARM3](task10/deployResult.png)
+![ARM3](task10/params.png)
+Description: ARM VM
 
 ## Practical Task 11: Convert an ARM Template to Bicep
 
+![Bicep](task11/reconfigure.png)
+![Bicep](task11/deployResult.png)
+![Bicep](task11/deployBicep.png)
+![Bicep](task11/tags.png)
+Description: Bicep Start
+
 ## Practical Task 12: Deploy a Multi-Resource Azure Infrastructure Using Bicep
+
+![Bicep2](task12/modules.png)
+![Bicep2](task12/mainconfig.png)
+![Bicep2](task12/deployment.png)
+![Bicep2](task12/config.png)
+![Bicep2](task12/resizingerror.png)
+Description: Bicep VM
 
 ## Practical Task 13: Implement Parameterization and Secrets Management in Bicep (optional)
 
+![Bicep3](task13/createvault.png)
+![Bicep3](task13/configforvault.png)
+![Bicep3](task13/proddevconfig.png)
+![Bicep3](task13/deployconnection.png)
+![Bicep3](task13/deployall.png)
+
+Description: Bicep Optional
+
 ## Practical Task 14: Configure Azure Monitor to Track VM Metrics and Alerts
+
+![Alerts](task14/alercreation.png)
+![Alerts](task14/emailnotifaction.png)
+![Alerts](task14/uialer.png)
+![Alerts](task14/stress.png)
+
+Description: Bicep Optional
 
 ## Practical Task 15: Create a Custom Dashboard in Azure Monitor (optional)
 
